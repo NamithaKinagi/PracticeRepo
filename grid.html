@@ -22,22 +22,25 @@
       }
 
       .grid-container {
-        display: grid;
-        grid-template-areas:
-          "header header header header header header"
-          "sidebar content1 content1 content1 content1 content1"
-          "sidebar content2 content2 content2 content3 content3"
-          "sidebar footer footer footer footer footer";
-        gap: 10px;
-        background-color: #2196f3;
-        padding: 10px;
+          display: grid;
+          height: 100vh;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: 0.2fr 1fr 1fr 0.3fr;
+          grid-template-areas:
+              "header header header"
+              "sidebar content1 content1"
+              "sidebar content2 content3"
+              "footer footer footer";
+          gap: 1rem;
+          background-color: #2196f3;
+          padding: 2rem;
       }
 
-      .grid-container > div {
-        background-color: rgba(255, 255, 255, 0.8);
-        text-align: center;
-        padding: 20px 0;
-        font-size: 30px;
+      .grid-container>div {
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          display: grid;
+          place-items: center;
+          background-color: rgba(255, 255, 255, 0.8);
       }
     </style>
   </head>
